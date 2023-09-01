@@ -49,7 +49,7 @@ function Header() {
                         </button>
                     </form>
 
-                    <UserCircleIcon className="h-14 w-14" />
+                    <UserCircleIcon className="h-10 w-10 " />
                 </div>
             </div>
 
