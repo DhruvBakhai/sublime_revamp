@@ -1,66 +1,48 @@
-"use-client";
-
+import React from "react";
 import Image from "next/image";
-
-import {
-    MagnifyingGlassIcon,
-    UserCircleIcon,
-} from "@heroicons/react/24/outline";
-
+import Link from "next/link";
 function Header() {
     return (
         <header>
-            <div className="flex flex-col md:flex-row bg-gray-500/10 rounded-b-2xl items-center p-5 ">
-                {/* logo */}
-                <div
-                    className="
-                absolute
-                top-0
-                left-0
-                w-full
-                h-96
-                bg-gradient-to-br
-                from-pink-400
-                to-[#0055D1]
-                rounded-md
-                filter
-                blur-3xl
-                opacity-50
-                -z-50
-                "/>
-                <Image
-                    src="https://links.papareact.com/c2cdd5"
-                    alt="trello-logo"
-                    width={300}
-                    height={100}
-                    className="w-44 md:w-56 pb-10 md:pb-0 object-contain"
-                />
-                <div className="flex items-center space-x-5 flex-1 justify-end w-full">
-                    {/* searchbox */}
-                    <form className="flex items-center space-x-5 bg-white rounded-md p-2 shadow-md flex-1 md:flex-initial ">
-                        <MagnifyingGlassIcon className="h-6 w-6 text-gray-400 " />
-                        <input
-                            type="text"
-                            className="flex-1  outline-none p-2"
-                            placeholder="Search.."
-                        />
-                        <button type="submit" hidden>
-                            Submit
-                        </button>
-                    </form>
+            {/* Logo */}
+            <div className="flex flex-col md:flex-row items-center p-2">
+                <div className="md:w-1/3 mt-3 ml-5" >
+                    <Image
+                        src="https://sublimedatasys.com/wp-content/uploads/2019/08/wihte-logo.png"
+                        alt="sublime-logo"
+                        width={300}
+                        height={100}
+                        className="w-44 md:w-56 pb-4 md:pb-0 object-contain hover:scale-110 transform transition-transform duration-300"
+                    />
+                </div>
 
-                    <UserCircleIcon className="h-10 w-10 " />
+                {/* Navbar */}
+                <div className="md:flex items-center mt-5 space-x-5 flex-1 justify-end w-full md:w-2/3 mr-4">
+                    {/* list items */}
+                    <ul className="flex flex-col md:flex-row items-center justify-center md:space-x-5 md:space-y-0 text-center md:text-left">
+                        <li className="nav-list_items text-lg">
+                            <Link href="/">Services</Link>
+                        </li>
+                        <li className="nav-list_items text-lg">
+                            <Link href="/blogs">Industries</Link>
+                        </li>
+                        <li className="nav-list_items text-lg">
+                            <Link href="/contact">Company</Link>
+                        </li>
+                        <li className="nav-list_items text-lg">
+                            <Link href="/faq">Blogs</Link>
+                        </li>
+                        <li className="nav-list_items text-lg">
+                            <Link href="/faq">Contacts</Link>
+                        </li>
+                        <li className="nav-list_items text-lg">
+                            <Link href="/faq">Free Consultation</Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div className="flex items-center justify-center px-5 py-2 md:py-5">
-                <p className="flex items-center justify-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit bg-white italic max-w-3xl text-[#0055D1]">
-                    <UserCircleIcon className="text-[#005DD1] inline-block h-10 w-10 mr-1" />
-                    GPT is summarising your tasks for the day...
-                </p>
-            </div>
 
-            {/* avatar */}
         </header>
     );
 }

@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities{
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.nav-list_items{
+    margin: 10px;
+    padding: 12px 30px;
+    color:white;
+    font-weight: 600;
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+    border: 3px solid transparent; /* Initially, no border */
+    border-radius: 24px;
+}
+.nav-list_items:hover {
+    border-color: rgb(202, 138, 4); /* Border color on hover */
+    cursor: pointer;
+    
+}
+.my-custom_bg-class {
+    background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1600');
+}
+}
